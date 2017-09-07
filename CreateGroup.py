@@ -19,8 +19,13 @@ class CreateGroup(unittest.TestCase):
         success = True
         wd = self.wd
         wd.get("http://localhost:8443/addressbook/group.php")
+        wd.find_element_by_name("user").click()
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys("admin")
         wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").send_keys("\\undefined")
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys("secret")
+
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
