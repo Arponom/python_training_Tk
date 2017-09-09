@@ -14,13 +14,21 @@ class CreateGroup(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
-    
+
     def test_CreateGroup(self):
-        success = True
+
+        login_account = 'admin'
+        login_pass = 'secter'
+
+        name_new_group = 'some test'
+        header_group = 'headerCap'
+        footer_group = 'footerCap'
+
         wd = self.wd
         self.open_home_page(wd)
-        self.login_admin(wd, user_name="admin", user_pass="sectet")
-        self.create_new_group(wd, group_name="sdf", group_header="dsf", group_footer="sdf")
+        self.login_admin(wd, user_name='admin', user_pass='secter')
+
+        self.create_new_group(wd, group_name=name_new_group, group_header=header_group, group_footer=footer_group)
         self.open_group_page(wd)
         self.logout(wd)
 
@@ -34,6 +42,7 @@ class CreateGroup(unittest.TestCase):
 
     def create_new_group(self, wd, group_name, group_header, group_footer):
 
+        wd.find_element_by_link_text("groups").click()
         wd.find_element_by_name("new").click()
 
         wd.find_element_by_name("group_name").click()
@@ -55,11 +64,10 @@ class CreateGroup(unittest.TestCase):
         wd.find_element_by_name("pass").click()
         wd.find_element_by_name("pass").clear()
         wd.find_element_by_name("pass").send_keys(user_pass)
-        wd.find_element_by_name("pass").send_keys("\\undefined")
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+        wd.find_element_by_css_selector("input[type=\"submit\"]").click()
 
     def open_home_page(self, wd):
-        wd.get("http://localhost:8443/addressbook/group.php")
+        wd.get("http://localhost:8443/addressbook/")
 
     def tearDown(self):
         self.wd.quit()
