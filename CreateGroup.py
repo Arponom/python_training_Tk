@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.common.action_chains import ActionChains
-import time, unittest
+
+import  unittest
 
 def is_alert_present(wd):
     try:
@@ -18,34 +18,49 @@ class CreateGroup(unittest.TestCase):
     def test_CreateGroup(self):
         success = True
         wd = self.wd
-        wd.get("http://localhost:8443/addressbook/group.php")
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
+        self.open_home_page(wd)
+        self.login_admin(wd, user_name="admin", user_pass="sectet")
+        self.create_new_group(wd, group_name="sdf", group_header="dsf", group_footer="sdf")
+        self.open_group_page(wd)
+        self.logout(wd)
 
-        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+    def logout(self, wd):
+
+        wd.find_element_by_link_text("Logout").click()
+
+    def open_group_page(self, wd):
+
+        wd.find_element_by_link_text("groups").click()
+
+    def create_new_group(self, wd, group_name, group_header, group_footer):
+
         wd.find_element_by_name("new").click()
+
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
-        wd.find_element_by_name("group_name").send_keys("sdf")
+        wd.find_element_by_name("group_name").send_keys(group_name)
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys("dsf")
+        wd.find_element_by_name("group_header").send_keys(group_header)
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys("sdf")
+        wd.find_element_by_name("group_footer").send_keys(group_footer)
+
         wd.find_element_by_name("submit").click()
-        wd.find_element_by_link_text("groups").click()
-        wd.find_element_by_link_text("Logout").click()
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").send_keys("\\undefined")
+
+    def login_admin(self, wd, user_name, user_pass):
         wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").send_keys("\\undefined")
-        self.assertTrue(success)
-    
+        wd.find_element_by_name("user").clear()
+        wd.find_element_by_name("user").send_keys(user_name)
+        wd.find_element_by_name("pass").click()
+        wd.find_element_by_name("pass").clear()
+        wd.find_element_by_name("pass").send_keys(user_pass)
+        wd.find_element_by_name("pass").send_keys("\\undefined")
+        wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
+
+    def open_home_page(self, wd):
+        wd.get("http://localhost:8443/addressbook/group.php")
+
     def tearDown(self):
         self.wd.quit()
 
