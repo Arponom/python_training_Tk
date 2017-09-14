@@ -1,11 +1,11 @@
 
-class group:
-    def __init__(self,_name, _header, _footer):
-        self.name=_name
-        self.header=_header
-        self.footer=_footer
+class add_new_group:
+    def __init__(self,n_name, h_header, f_footer):
+        self.name=n_name
+        self.header=h_header
+        self.footer=f_footer
 
-    def __init__(self,firstname, middlename, lastname, nickname, title, company, address, home, mobile,
+    """def __init__(self,firstname, middlename, lastname, nickname, title, company, address, home, mobile,
                            work, fax, email ):
         self.firstname=firstname
         self.middlename=middlename
@@ -18,5 +18,5 @@ class group:
         self.mobile = mobile
         self.work = work
         self.fax = fax
-        self.email = email
+        self.email = email"""
 
