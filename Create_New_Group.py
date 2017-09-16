@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from fixtura import testing
-from add_new_group import add_new_group
+from Create_Group_Fixtura import testing
+from Help_class_Group import add_new_group
 import pytest
 
 
