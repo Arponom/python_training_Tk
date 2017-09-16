@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from Create_Group_Fixtura import testing
-from Help_class_Group import add_new_group
+from Help_Class_Group import add_new_group
 import pytest
-
+#16.09.17
 
 @pytest.fixture
 def app(request):

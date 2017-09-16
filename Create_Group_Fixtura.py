@@ -1,6 +1,5 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
-
-
+#16.09.17
 class testing:
     def __init__(self):
         self.wd = WebDriver()
