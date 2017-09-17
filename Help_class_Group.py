@@ -4,7 +4,7 @@ class add_new_group:
         self.name=n_name
         self.header=h_header
         self.footer=f_footer
-
+##
     """def __init__(self,firstname, middlename, lastname, nickname, title, company, address, home, mobile,
                            work, fax, email ):
         self.firstname=firstname
