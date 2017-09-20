@@ -14,4 +14,3 @@ class create_new_address:
         self.work = work
         self.fax = fax
         self.email = email
-##

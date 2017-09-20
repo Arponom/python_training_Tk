@@ -4,7 +4,7 @@ class add_new_group:
         self.name = n_name
         self.header = h_header
         self.footer = f_footer
-
+###
     """def __init__(self, name_e ,header_e,footer_e):
         self.name_e = name_e
         self.header_e = header_e

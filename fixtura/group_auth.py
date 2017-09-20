@@ -4,7 +4,7 @@ class aut_helper:
     def __init__(self, app):
         self.app = app
 
-    def login(self, login_sys, pass_sys):
+    def login_gr(self, login_sys, pass_sys):
         wd = self.app.wd
 
         self.app.go_on_page()
@@ -18,6 +18,6 @@ class aut_helper:
         wd.find_element_by_name("pass").send_keys(pass_sys)
         wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
-    def logout(self):
+    def logout_gr(self):
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()

@@ -18,16 +18,16 @@ class grouphelp:
         wd.find_element_by_name("group_footer").send_keys(group.footer)
         wd.find_element_by_name("submit").click()
 
-    def open_page(self):
+    def open_page_gr(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
 
-    def click(self):
+    def click_gr(self):
         wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_name("edit").click()
 
-    def edit(self, name_e, header_e, footer_e):
+    def edit_gr(self, name_e, header_e, footer_e):
         wd = self.app.wd
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
@@ -40,7 +40,7 @@ class grouphelp:
         wd.find_element_by_name("group_footer").send_keys(footer_e)
         wd.find_element_by_name("update").click()
 
-    def delete(self):
+    def delete_gr(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
         wd.find_element_by_name("selected[]").click()

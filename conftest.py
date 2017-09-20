@@ -7,6 +7,3 @@ def app(request):
     fixture = testing()
     request.addfinalizer(fixture.destroyer)
     return fixture
-
-
-
