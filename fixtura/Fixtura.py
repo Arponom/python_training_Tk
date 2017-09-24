@@ -1,8 +1,8 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 #16.09.17
-from fixtura.group_auth import aut_helper
-from fixtura.group_helper import grouphelp
-from fixtura.address_helper import adress_helper
+from fixtura.Authorization import aut_helper
+from fixtura.Group_helper import grouphelp
+from fixtura.Address_helper import adress_helper
 ##
 class testing:
 

@@ -1,4 +1,3 @@
-
 class create_new_address:
     def __init__(self,firstname, middlename, lastname, nickname, title, company, address, home, mobile,
                            work, fax, email ):

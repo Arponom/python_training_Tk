@@ -1,6 +1,6 @@
 import pytest
 
-from fixtura.Create_Group_Fixtura import testing
+from fixtura.Fixtura import testing
 
 @pytest.fixture(scope="session")
 def app(request):
