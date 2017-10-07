@@ -22,7 +22,7 @@ class aut_helper:
 #------------------------------------------------------
     def ensure_logout(self):
         wd = self.app.wd
-        if self.is_logged_in():
+        if len(wd.find_elements_by_link_text("Logout")) > 0:
             self.logout_q()
 
     def is_logged_in(self):
@@ -33,11 +33,9 @@ class aut_helper:
         wd = self.app.wd
         return wd.find_element_by_xpath("//div/div[1]/form/b").text == "(" + login_syss + ")"
 
-
     def ensure_login(self, login_syss, pass_syss):
         wd = self.app.wd
-
-        if self.is_logged_in:
+        if self.is_logged_in():
             if self.is_logged_in_as(login_syss):
                 return
             else:

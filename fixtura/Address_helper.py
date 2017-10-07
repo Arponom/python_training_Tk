@@ -15,7 +15,7 @@ class adress_helper:
 
     def page_auth(self, login_syss, pass_syss):
         wd = self.app.wd
-
+        wd.get("http://localhost:8443/addressbook/")
         wd.find_element_by_name("user").clear()
         wd.find_element_by_name("user").send_keys(login_syss)
 
@@ -138,3 +138,12 @@ class adress_helper:
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+
+    def logout_lr(self):
+        wd = self.app.wd
+
+    def logout_gr(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("Logout").click()
+
+# ----------------------------------
