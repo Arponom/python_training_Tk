@@ -9,9 +9,11 @@ class adress_helper:
 
         wd.find_element_by_link_text("add new").click()
 
+    #------------------ оптимизация переходов между страницами
     def open_page(self):
         wd = self.app.wd
-        wd.get("http://localhost:8443/addressbook/")
+        if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_name("add")) >0):
+            wd.get("http://localhost:8443/addressbook/")
 
     def page_auth(self, login_syss, pass_syss):
         wd = self.app.wd
@@ -132,12 +134,20 @@ class adress_helper:
 
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
-    def check_del(self):
+    def open_address_page(self):
         wd = self.app.wd
         wd.get("http://localhost:8443/addressbook/")
+
+    def check_del(self):
+        wd = self.app.wd
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+
+    def countt(self):
+        wd = self.app.wd
+        self.open_address_page()
+        return len(wd.find_elements_by_name("selected[]"))
 
     def logout_lr(self):
         wd = self.app.wd

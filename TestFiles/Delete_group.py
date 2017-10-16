@@ -1,7 +1,8 @@
+from Help_Class_Group import add_new_group
 
 
-def test_delete_address(app):
-    app.adress.open_page()
-    app.adress.page_auth(login_syss="admin", pass_syss="secret")
-    app.adress.check_del()
-    app.auth.logout_gr()
+def test_delete_group(app):
+    app.group.open_page_gr()
+    if app.group.count() == 0:
+        app.group.create(add_new_group(name="date1", header="date2", footer="date3"))
+    app.group.delete_gr()
