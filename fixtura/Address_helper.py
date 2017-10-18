@@ -1,3 +1,5 @@
+from model.Help_Class_Address import create_new_address
+
 
 class adress_helper:
 
@@ -85,54 +87,43 @@ class adress_helper:
         wd = self.app.wd
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
 
-    def edit_address(self,firstname_,middlename_,lastname_,nickname_,title_,company_,address_,home_,
-        mobile_,work_,fax_,email_):
+
+    def edit_addresss(self, addresss):
         wd = self.app.wd
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(firstname_)
-        wd.find_element_by_name("middlename").click()
-        wd.find_element_by_name("middlename").clear()
-        wd.find_element_by_name("middlename").send_keys(middlename_)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(lastname_)
-        wd.find_element_by_name("nickname").click()
-        wd.find_element_by_name("nickname").clear()
-        wd.find_element_by_name("nickname").send_keys(nickname_)
-        wd.find_element_by_name("title").click()
-        wd.find_element_by_name("title").clear()
-        wd.find_element_by_name("title").send_keys(title_)
-        wd.find_element_by_name("company").click()
-        wd.find_element_by_name("company").clear()
-        wd.find_element_by_name("company").send_keys(company_)
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(address_)
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(home_)
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(mobile_)
-        wd.find_element_by_name("work").click()
-        wd.find_element_by_name("work").clear()
-        wd.find_element_by_name("work").send_keys(work_)
-        wd.find_element_by_name("fax").click()
-        wd.find_element_by_name("fax").clear()
-        wd.find_element_by_name("fax").send_keys(fax_)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(email_)
+        self.change_field("firstname", addresss.firstname)
+        self.change_field("middlename", addresss.middlename)
+        self.change_field("lastname", addresss.lastname)
+        self.change_field("nickname", addresss.nickname)
+        self.change_field("title", addresss.title)
+        self.change_field("company", addresss.company)
+        self.change_field("address", addresss.address)
+        self.change_field("home", addresss.home)
+        self.change_field("mobile", addresss.mobile)
+        self.change_field("work", addresss.work)
+        self.change_field("fax", addresss.fax)
+        self.change_field("email", addresss.email)
+
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[15]").is_selected():
             wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[15]").click()
         if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[3]").is_selected():
             wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[3]").click()
-        wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys("1900")
 
-        wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.change_field("byear", addresss.byear)
+        wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
+
+    def change_field(self,field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
+
+
+    """def edit_address(self,firstname_,middlename_,lastname_,nickname_,title_,company_,address_,home_,
+        mobile_,work_,fax_,email_):
+        wd = self.app.wd"""
+
+
 
     def open_address_page(self):
         wd = self.app.wd
@@ -156,4 +147,17 @@ class adress_helper:
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
 
+
+    def get_address_list(self):
+        wd = self.app.wd
+        address = []
+        for element in wd.find_elements_by_name("entry"):
+            #text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+
+            first_name = element.find_element_by_xpath("./td[2]").text
+            last_name = element.find_element_by_xpath("./td[3]").text
+
+            address.append(create_new_address(id=id, firstname=first_name,lastname=last_name))
+        return address
 # ----------------------------------

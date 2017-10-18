@@ -1,3 +1,4 @@
+from model.Help_Class_Group import add_new_group
 
 class grouphelp:
 
@@ -56,3 +57,12 @@ class grouphelp:
         wd = self.app.wd
         self.open_page_gr()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_group_list(self):
+        wd = self.app.wd
+        groups = []
+        for element in wd.find_elements_by_css_selector("span.group"):
+            text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            groups.append(add_new_group(name=text, id=id))
+        return groups
