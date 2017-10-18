@@ -22,5 +22,4 @@ def test_create_address(app):
     old_address.append(address)
     assert sorted(old_address, key=create_new_address.id_or_max) == sorted(new_address, key=create_new_address.id_or_max)
 
-    #app.auth.logout_gr()
-
+ 

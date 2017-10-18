@@ -74,6 +74,7 @@ class adress_helper:
         wd.find_element_by_name("byear").send_keys("1900")
 
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.address_cache = None
 
     def return_home_page(self):
         wd = self.app.wd
@@ -83,8 +84,9 @@ class adress_helper:
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
 
-    def click(self):
+    def click_Index(self,index):
         wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
 
 
@@ -110,6 +112,7 @@ class adress_helper:
 
         self.change_field("byear", addresss.byear)
         wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
+        self.address_cache = None
 
     def change_field(self,field_name, text):
         wd = self.app.wd
@@ -134,6 +137,14 @@ class adress_helper:
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+        self.address_cache = None
+
+    def check_del_Index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.address_cache = None
 
     def countt(self):
         wd = self.app.wd
@@ -147,17 +158,19 @@ class adress_helper:
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
 
+    address_cache = None
 
     def get_address_list(self):
-        wd = self.app.wd
-        address = []
-        for element in wd.find_elements_by_name("entry"):
-            #text = element.text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
+        if self.address_cache is None:
+            wd = self.app.wd
+            self.address_cache = []
+            for element in wd.find_elements_by_name("entry"):
+                #text = element.text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
 
-            first_name = element.find_element_by_xpath("./td[2]").text
-            last_name = element.find_element_by_xpath("./td[3]").text
+                first_name = element.find_element_by_xpath("./td[2]").text
+                last_name = element.find_element_by_xpath("./td[3]").text
 
-            address.append(create_new_address(id=id, firstname=first_name,lastname=last_name))
-        return address
+                self.address_cache.append(create_new_address(id=id, firstname=first_name,lastname=last_name))
+        return list(self.address_cache)
 # ----------------------------------

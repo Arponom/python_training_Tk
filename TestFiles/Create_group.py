@@ -5,13 +5,9 @@ def test_create_group(app):
 
     app.group.open_page_gr()
     old_groups = app.group.get_group_list() #
-
     group = add_new_group(name="date1", header="date2", footer="date3")
-
     app.group.create(group)
-    time.sleep(1)
     app.group.open_page_gr()
-    time.sleep(1)
     new_groups = app.group.get_group_list() #
     assert len(old_groups) + 1 == len(new_groups) #
 

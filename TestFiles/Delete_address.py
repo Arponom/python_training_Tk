@@ -1,5 +1,6 @@
 from model.Help_Class_Address import create_new_address
 import time
+from random import randrange
 
 def test_delete_address(app):
     #app.adress.open_page()
@@ -7,6 +8,7 @@ def test_delete_address(app):
     app.adress.open_page()
 
     old_address = app.adress.get_address_list()
+    index = randrange(len(old_address))
 
     if app.adress.countt()==0:
         app.adress.new_address()
@@ -17,13 +19,13 @@ def test_delete_address(app):
                                email='test12'))
     app.adress.open_page()
 
-    app.adress.check_del()
+    app.adress.check_del_Index(index)
     time.sleep(1)
     app.adress.open_page()
     time.sleep(1)
     new_address = app.adress.get_address_list()
     assert len(old_address) - 1 == len(new_address)
 
-    old_address[0:1]=[]
+    old_address[index:index+1]=[]
     assert old_address == new_address
     #app.auth.logout_gr()
