@@ -1,7 +1,7 @@
 
-from Help_Class_Group import add_new_group
 import time
 
+from model.Help_Class_Group import add_new_group
 
 
 def test_create(app):

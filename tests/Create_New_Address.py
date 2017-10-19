@@ -1,13 +1,5 @@
-import pytest
 
-from Help_Class_Address import create_new_address
-from fixtura.conftest import configurate
-##
-@pytest.fixture
-def app(request):
-    fixture = configurate()
-    request.addfinalizer(fixture.destroyer)
-    return fixture
+from model.Help_Class_Address import create_new_address
 
 def test_new_address(app):
 

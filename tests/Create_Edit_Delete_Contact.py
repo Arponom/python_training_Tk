@@ -1,6 +1,6 @@
 
-from Help_Class_Address import create_new_address
-import time
+from model.Help_Class_Address import create_new_address
+
 
 def test_autinsystem(app):
     app.adress.open_page()
