@@ -4,6 +4,9 @@ from fixtura.Session import aut_helper
 from fixtura.Group_helper import grouphelp
 from fixtura.Address_helper import adress_helper
 ##
+from fixtura.contact import ContactHelper
+
+
 class testing:
 
     def __init__(self):
@@ -12,7 +15,7 @@ class testing:
         self.auth = aut_helper(self)
         self.group = grouphelp(self)
         self.adress = adress_helper(self)
-
+        self.contact = ContactHelper(self)
 
     def is_valid(self):
         try:

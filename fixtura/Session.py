@@ -31,7 +31,11 @@ class aut_helper:
 
     def is_logged_in_as(self, login_syss):
         wd = self.app.wd
-        return wd.find_element_by_xpath("//div/div[1]/form/b").text == "(" + login_syss + ")"
+        return self.get_logged_user() == login_syss
+
+    def get_logged_user(self):
+        wd = self.app.wd
+        return wd.find_element_by_xpath("//div/div[1]/form/b").text[1:-1]
 
     def ensure_login(self, login_syss, pass_syss):
         wd = self.app.wd
