@@ -83,3 +83,4 @@ class grouphelp:
         self.select_group_by_index(index)
         wd.find_element_by_name("delete").click()
         self.group_cache = None
+#

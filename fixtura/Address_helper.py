@@ -87,7 +87,7 @@ class adress_helper:
     def click_Index(self,index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.find_element_by_xpath("//tr[@class='odd']/td[8]/a/img")[index].click()
 
 
     def edit_addresss(self, addresss):
@@ -174,3 +174,4 @@ class adress_helper:
                 self.address_cache.append(create_new_address(id=id, firstname=first_name,lastname=last_name))
         return list(self.address_cache)
 # ----------------------------------
+#
