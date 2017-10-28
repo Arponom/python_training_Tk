@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6329de5a-821b-45d5-be3b-65b02d0da69e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/groups.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generator/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generator/group.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/python_training_Tk.iml" afterPath="$PROJECT_DIR$/.idea/python_training_Tk.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generator/address.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/groups.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Conftest.py" afterPath="$PROJECT_DIR$/Conftest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestFiles/Create_address.py" afterPath="$PROJECT_DIR$/TestFiles/Create_address.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestFiles/Create_group.py" afterPath="$PROJECT_DIR$/TestFiles/Create_group.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/groups.py" afterPath="$PROJECT_DIR$/data/groups.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtura/Address_helper.py" afterPath="$PROJECT_DIR$/fixtura/Address_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtura/Fixtura.py" afterPath="$PROJECT_DIR$/fixtura/Fixtura.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtura/Group_helper.py" afterPath="$PROJECT_DIR$/fixtura/Group_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtura/Session.py" afterPath="$PROJECT_DIR$/fixtura/Session.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fixtura/contact.py" afterPath="$PROJECT_DIR$/fixtura/contact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator/group.py" afterPath="$PROJECT_DIR$/generator/group.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Help_Class_Address.py" afterPath="$PROJECT_DIR$/model/Help_Class_Address.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Help_Class_Group.py" afterPath="$PROJECT_DIR$/model/Help_Class_Group.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target.json" afterPath="$PROJECT_DIR$/target.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,35 +29,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Conftest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Conftest.py">
+      <file leaf-file-name="target.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/target.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generator/group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Create_group.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestFiles/Create_group.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,6 +55,9 @@
       <find>testing</find>
       <find>fristname</find>
       <find>test</find>
+      <find>data</find>
+      <find>current_url</find>
+      <find>json</find>
     </findStrings>
     <dirStrings>
       <dir>A:\Course\Python_Courses\python_training_Tk</dir>
@@ -82,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/add_new_group.py" />
         <option value="$PROJECT_DIR$/Create_New_address.py" />
         <option value="$PROJECT_DIR$/Create_New_Group_Fixtura.py" />
@@ -117,30 +103,31 @@
         <option value="$PROJECT_DIR$/TestFiles/Delete_address.py" />
         <option value="$PROJECT_DIR$/TestFiles/Edit_address.py" />
         <option value="$PROJECT_DIR$/TestFiles/test_phones" />
-        <option value="$PROJECT_DIR$/fixtura/contact.py" />
         <option value="$PROJECT_DIR$/TestFiles/test_phoness.py" />
         <option value="$PROJECT_DIR$/model/contact.py" />
-        <option value="$PROJECT_DIR$/fixtura/Group_helper.py" />
-        <option value="$PROJECT_DIR$/TestFiles/Create_address.py" />
-        <option value="$PROJECT_DIR$/fixtura/Address_helper.py" />
-        <option value="$PROJECT_DIR$/target.json" />
-        <option value="$PROJECT_DIR$/fixtura/Fixtura.py" />
-        <option value="$PROJECT_DIR$/fixtura/Session.py" />
-        <option value="$PROJECT_DIR$/model/Help_Class_Address.py" />
-        <option value="$PROJECT_DIR$/model/Help_Class_Group.py" />
         <option value="$PROJECT_DIR$/data/add_group.py" />
         <option value="$PROJECT_DIR$/data/groups.py" />
+        <option value="$PROJECT_DIR$/fixtura/Address_helper.py" />
+        <option value="$PROJECT_DIR$/fixtura/contact.py" />
+        <option value="$PROJECT_DIR$/fixtura/Fixtura.py" />
+        <option value="$PROJECT_DIR$/fixtura/Group_helper.py" />
+        <option value="$PROJECT_DIR$/fixtura/Session.py" />
+        <option value="$PROJECT_DIR$/generator/address.py" />
         <option value="$PROJECT_DIR$/generator/group.py" />
-        <option value="$PROJECT_DIR$/Conftest.py" />
+        <option value="$PROJECT_DIR$/TestFiles/Create_address.py" />
         <option value="$PROJECT_DIR$/TestFiles/Create_group.py" />
+        <option value="$PROJECT_DIR$/model/Help_Class_Address.py" />
+        <option value="$PROJECT_DIR$/model/Help_Class_Group.py" />
+        <option value="$PROJECT_DIR$/Conftest.py" />
+        <option value="$PROJECT_DIR$/target.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="292" />
-    <option name="y" value="39" />
-    <option name="width" value="1620" />
-    <option name="height" value="1000" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -157,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -185,36 +171,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_training_Tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_training_Tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_training_Tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python_training_Tk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,25 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Create_Group">
-    <configuration default="false" name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python_training_Tk" />
-      <option name="SCRIPT_NAME" value="A:\Course\Python_Courses\python_training_Tk\Conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Create_address">
     <configuration default="false" name="Address_helper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -323,6 +264,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python_training_Tk" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/group.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="address" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python_training_Tk" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generator/address.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -634,19 +593,19 @@
       <item index="10" class="java.lang.String" itemvalue="Python tests.test_phones" />
       <item index="11" class="java.lang.String" itemvalue="Python tests.Create_address" />
       <item index="12" class="java.lang.String" itemvalue="Python tests.Create_Group" />
-      <item index="13" class="java.lang.String" itemvalue="Python.conftest" />
-      <item index="14" class="java.lang.String" itemvalue="Python.Address_helper" />
-      <item index="15" class="java.lang.String" itemvalue="Python tests.Unittests for test_phoness.test_phones_on_home_page_reverse" />
-      <item index="16" class="java.lang.String" itemvalue="Python tests.py.test for Create_address.test_create_address" />
-      <item index="17" class="java.lang.String" itemvalue="Python.group" />
+      <item index="13" class="java.lang.String" itemvalue="Python.Address_helper" />
+      <item index="14" class="java.lang.String" itemvalue="Python tests.Unittests for test_phoness.test_phones_on_home_page_reverse" />
+      <item index="15" class="java.lang.String" itemvalue="Python tests.py.test for Create_address.test_create_address" />
+      <item index="16" class="java.lang.String" itemvalue="Python.group" />
+      <item index="17" class="java.lang.String" itemvalue="Python.address" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.group" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for Create_address.test_create_address" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests for test_phoness.test_phones_on_home_page_reverse" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Address_helper" />
-        <item index="4" class="java.lang.String" itemvalue="Python.conftest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.address" />
+        <item index="1" class="java.lang.String" itemvalue="Python.group" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for Create_address.test_create_address" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests for test_phoness.test_phones_on_home_page_reverse" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Address_helper" />
       </list>
     </recent_temporary>
   </component>
@@ -664,24 +623,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Create_Group - 2017.10.28 at 20h 27m 41s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Create_Group - 2017.10.28 at 21h 21m 25s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Create_Group - 2017.10.28 at 21h 22m 57s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Create_Group - 2017.10.28 at 21h 28m 40s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Create_Group - 2017.10.28 at 21h 30m 40s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Create_Group - 2017.10.28 at 21h 31m 46s.xml">
-      <configuration name="Create_Group" configurationId="tests" />
-    </history-entry>
     <history-entry file="Create_Group - 2017.10.28 at 21h 38m 03s.xml">
       <configuration name="Create_Group" configurationId="tests" />
     </history-entry>
@@ -694,6 +635,24 @@
     <history-entry file="Create_Group - 2017.10.28 at 21h 42m 39s.xml">
       <configuration name="Create_Group" configurationId="tests" />
     </history-entry>
+    <history-entry file="Create_Group - 2017.10.28 at 21h 46m 17s.xml">
+      <configuration name="Create_Group" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Create_Group - 2017.10.28 at 21h 47m 45s.xml">
+      <configuration name="Create_Group" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Create_Group - 2017.10.28 at 21h 48m 37s.xml">
+      <configuration name="Create_Group" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Create_Group - 2017.10.28 at 21h 48m 56s.xml">
+      <configuration name="Create_Group" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Create_Group - 2017.10.28 at 21h 49m 43s.xml">
+      <configuration name="Create_Group" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Create_address - 2017.10.28 at 23h 24m 44s.xml">
+      <configuration name="Create_address" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,13 +664,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="292" y="39" width="1620" height="1000" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21761657" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2094522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4767837" sideWeight="0.50698173" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47664672" sideWeight="0.50698173" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25748503" sideWeight="0.4975812" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26160815" sideWeight="0.4975812" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -757,34 +717,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/selenium/webdriver/support/event_firing_webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="224" column="8" lean-forward="false" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/wheel/bdist_wheel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/py/_path/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="210" column="8" lean-forward="false" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/metadata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="493" column="8" lean-forward="false" selection-start-line="493" selection-start-column="8" selection-end-line="493" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/_pytest/cacheprovider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -822,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="748" column="0" lean-forward="false" selection-start-line="748" selection-start-column="0" selection-end-line="748" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,13 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/123.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="27" column="90" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/123.py" />
     <entry file="file://$PROJECT_DIR$/TestFiles/Edit_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -898,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="514" column="8" lean-forward="false" selection-start-line="514" selection-start-column="8" selection-end-line="514" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestFiles/Delete_address.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -940,71 +858,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixtura/Address_helper.py">
+    <entry file="file://$PROJECT_DIR$/data/group1s.json" />
+    <entry file="file://$PROJECT_DIR$/data/test.json" />
+    <entry file="file://$PROJECT_DIR$/data/groups1.json" />
+    <entry file="file://$PROJECT_DIR$/data_groups.json" />
+    <entry file="file://$PROJECT_DIR$/model/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestFiles/Create_address.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Help_Class_Address.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixtura/Session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Help_Class_Group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="588">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fixtura/Group_helper.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="267">
+          <caret line="514" column="8" lean-forward="false" selection-start-line="514" selection-start-column="8" selection-end-line="514" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/group1s.json">
+    <entry file="file://$PROJECT_DIR$/env/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/groups1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="267">
+          <caret line="555" column="8" lean-forward="false" selection-start-line="555" selection-start-column="8" selection-end-line="555" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1016,78 +892,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_groups.json">
+    <entry file="file://$PROJECT_DIR$/data/address.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-447">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Conftest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="46" column="40" lean-forward="true" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixtura/contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="111" column="65" lean-forward="true" selection-start-line="111" selection-start-column="65" selection-end-line="111" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixtura/Fixtura.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/groups.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="21">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtura/Address_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtura/contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtura/Fixtura.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestFiles/Create_address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding>
+            <element signature="e#3#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestFiles/Create_group.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Help_Class_Address.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Help_Class_Group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtura/Group_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixtura/Session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
