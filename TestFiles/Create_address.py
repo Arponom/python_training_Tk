@@ -19,7 +19,7 @@ create_new_address(firstname=random_date('firstname',10), middlename=random_date
 
 @pytest.mark.parametrize("add_address", address_data , ids=[repr(x) for x in address_data ])
 def test_create_address(app, add_address):
-    app.adress.open_page()
+    #app.adress.open_page()
     #app.adress.page_auth(login_syss="admin", pass_syss="secret")
 
     old_address = app.adress.get_address_list()

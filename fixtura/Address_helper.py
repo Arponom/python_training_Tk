@@ -8,7 +8,6 @@ class adress_helper:
 
     def new_address(self):
         wd = self.app.wd
-
         wd.find_element_by_link_text("add new").click()
 
     #------------------ оптимизация переходов между страницами
