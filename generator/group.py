@@ -1,0 +1,43 @@
+import random
+import string
+from model.Help_Class_Group import add_new_group
+import os.path
+import jsonpickle
+import getopt
+import sys
+
+
+try:
+    opts, args = getopt.getopt(sys.argv[1:], "n:f:", ["number of group", "file"])
+except getopt.GetoptError as err:
+    getopt.usage()
+    sys.exit()
+
+n = 3
+f = "data/groups.json"
+
+for o, a in opts:
+    if 0=="-n":
+        n= int(a)
+    elif o=="-f":
+        f=a
+
+
+def random_string(prefix, maxlen):
+    symbols = string.ascii_letters + string.digits + " " * 10
+    return prefix + "".join([random.choice(symbols) for i in range (random.randrange(maxlen))])
+
+
+testdata = [add_new_group(name=random_string("name",10),
+                          header=random_string("header",15),
+                          footer=random_string("footer",5))
+            for i in range(n)
+            ]
+
+
+file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
+
+with open(file,"w") as out:
+    jsonpickle.set_encoder_options("json", indent=2)
+    #out.write(json.dumps(testdata, default=lambda x: x.__dict__, indent=2))
+    out.write(jsonpickle.encode(testdata))

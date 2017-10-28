@@ -1,20 +1,12 @@
 from model.Help_Class_Group import add_new_group
-import time
-import pytest
-import random
-import string
-
-def random_string(prefix, maxlen):
-    symbols = string.ascii_letters + string.digits + " " * 10
-    return prefix + "".join([random.choice(symbols) for i in range (random.randrange(maxlen))])
+#from data.groups import testdata
+#import pytest
 
 
-testdata = [
-add_new_group(name=random_string("name",10), header=random_string("header",15), footer=random_string("footer",5))]
-
-@pytest.mark.parametrize("add_new", testdata, ids=[repr(x) for x in testdata])
-def test_create_group(app, add_new):
-
+#
+#@pytest.mark.parametrize("add_new", testdata, ids=[repr(x) for x in testdata])
+def test_create_group(app, json_data_groups):
+    add_new = json_data_groups
     app.group.open_page_gr()
     old_groups = app.group.get_group_list() #
     app.group.create(add_new)
