@@ -1,5 +1,5 @@
 from model.Help_Class_Group import add_new_group
-#
+##
 class grouphelp:
 
     def __init__(self, app):
@@ -66,6 +66,7 @@ class grouphelp:
         if self.group_cache is None:
 
             wd = self.app.wd
+            self.open_page_gr()
             self.group_cache = []
             for element in wd.find_elements_by_css_selector("span.group"):
                 text = element.text
@@ -83,4 +84,14 @@ class grouphelp:
         self.select_group_by_index(index)
         wd.find_element_by_name("delete").click()
         self.group_cache = None
-#
+#delete_gr_byId
+
+    def delete_gr_byId(self, id):
+        wd = self.app.wd
+        self.select_group_by_id(id)
+        wd.find_element_by_name("delete").click()
+        self.group_cache = None
+
+    def select_group_by_id(self,id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()

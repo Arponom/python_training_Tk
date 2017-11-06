@@ -1,4 +1,4 @@
-##
+###
 class aut_helper:
 
     def __init__(self, app):
@@ -45,4 +45,3 @@ class aut_helper:
             else:
                 self.logout_q()
         self.login_q(login_syss, pass_syss)
-##########

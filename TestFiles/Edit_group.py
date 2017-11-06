@@ -1,15 +1,15 @@
 from model.Help_Class_Group import add_new_group
 from random import randrange
 
-def test_edit_group(app):
+def test_edit_group(app, db):
     app.group.open_page_gr()
 
-    old_groups = app.group.get_group_list()  #
+    old_groups = db.get_group_list()  #
     index = randrange(len(old_groups))
     group = add_new_group(name="sdf")
     group.id = old_groups[index].id
 
-    if app.group.count()==0:
+    if app.group.count() == 0:
         app.group.create(add_new_group(name="date1", header="date2", footer="date3"))
         app.group.open_page_gr()
 
@@ -18,7 +18,7 @@ def test_edit_group(app):
     app.group.edit_gr(group)
     app.group.open_page_gr()
 
-    new_groups = app.group.get_group_list()  #
+    new_groups = db.get_group_list()  #
     assert len(old_groups) == len(new_groups)  #
 
     old_groups[index]=group

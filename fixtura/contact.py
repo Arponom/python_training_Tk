@@ -1,5 +1,5 @@
 from model.contact import Contact
-#
+##
 
 class ContactHelper:
 

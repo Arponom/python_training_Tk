@@ -1,5 +1,5 @@
 from model.Help_Class_Address import create_new_address
-#
+##
 
 class adress_helper:
 
@@ -86,7 +86,7 @@ class adress_helper:
     def click_Index(self,index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
-        wd.find_element_by_xpath("//tr[@class='odd']/td[8]/a/img")[index].click()
+        wd.find_element_by_xpath("//tr[@class='odd']/td[8]/a/img").click()
 
 
     def edit_addresss(self, addresss):

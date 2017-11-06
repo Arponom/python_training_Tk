@@ -1,7 +1,7 @@
 import random
 import string
 from model.Help_Class_Group import add_new_group
-#
+##
 
 def random_string(prefix, maxlen):
     symbols = string.ascii_letters + string.digits + " " * 10

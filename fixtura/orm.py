@@ -3,10 +3,12 @@ from datetime import datetime
 from model.Help_Class_Group import add_new_group
 from model.Help_Class_Address import create_new_address
 from pymysql.converters import decoders
-
+from pymysql.converters import encoders, decoders, convert_mysql_timestamp
+#
 class ORMFixture:
 
     db=Database()
+
 
     class ORMGroup(db.Entity):
         _table_ = 'group_list'
@@ -38,7 +40,11 @@ class ORMFixture:
 
 
     def __init__(self, host, name,user,password):
-        self.db.bind('mysql', host=host, database=name, user=user, password=password, conv=decoders)
+        conv = encoders
+        conv.update(decoders)
+        conv[datetime] = convert_mysql_timestamp
+        self.db.bind('mysql', host=host, database=name, user=user, password=password, conv=conv)
+        #self.db.bind('mysql', host=host, database=name, user=user, password=password, conv=decoders)
         self.db.generate_mapping()
 
     @db_session
@@ -53,3 +59,10 @@ class ORMFixture:
     def get_contacts_in_group(self,group):
         orm_group = list(select(g for g in ORMFixture.ORMGroup if g.id == group.id))[0]
         return self.convert_contacts_to_model(orm_group.contacts)
+
+    @db_session
+    def get_contacts_not_in_group(self,group):
+        orm_group = list(select(g for g in ORMFixture.ORMGroup if g.id == group.id))[0]
+        return self.convert_contacts_to_model(
+            select(c for c in ORMFixture.ORMContact if c.deprecated is None and orm_group not in c.group)
+        )

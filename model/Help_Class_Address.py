@@ -20,7 +20,7 @@ class create_new_address:
         ####
 
     def __repr__(self):
-        return "%s" % (self.id)
+        return "%s: %s: %s" % (self.id, self.firstname, self.lastname)
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id)
