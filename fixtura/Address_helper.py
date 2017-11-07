@@ -172,5 +172,22 @@ class adress_helper:
 
                 self.address_cache.append(create_new_address(id=id, firstname=first_name,lastname=last_name))
         return list(self.address_cache)
+
+    def get_address_more_list(self):
+        if self.address_cache is None:
+            wd = self.app.wd
+            self.address_cache = []
+            for element in wd.find_elements_by_name("entry"):
+                # text = element.text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+
+                first_name = element.find_element_by_xpath("./td[2]").text
+                last_name = element.find_element_by_xpath("./td[3]").text
+                address = element.find_element_by_xpath("./td[4]").text
+                email = element.find_element_by_xpath("./td[5]").text
+                phone = element.find_element_by_xpath("./td[6]").text
+
+                self.address_cache.append(create_new_address(id=id, firstname=first_name,address=address,email=email, lastname=last_name, phone=phone))
+        return list(self.address_cache)
 # ----------------------------------
 ###

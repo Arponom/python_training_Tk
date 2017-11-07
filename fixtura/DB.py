@@ -1,4 +1,5 @@
 import mysql.connector
+import re
 from model.Help_Class_Group import add_new_group
 from model.Help_Class_Address import create_new_address
 class DbFixture:
@@ -31,6 +32,19 @@ class DbFixture:
             for row in cursor:
                 (id,firstname,lastname) = row
                 list.append(create_new_address(id=str(id), firstname=firstname, lastname=lastname))
+        finally:
+            cursor.close()
+        return list
+
+    def get_more_contact(self):
+        list=[]
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select id, firstname, lastname, address, email, home, mobile, work, fax  from addressbook where deprecated='0000-00-00 00:00:00'")
+            for row in cursor:
+                (id,firstname,lastname,address,email,home, mobile, work, fax ) = row
+                list.append(create_new_address(id=str(id), firstname=firstname, lastname=lastname,address=address,email=email,
+                                               home=home,mobile=mobile,work=work,fax=fax))
         finally:
             cursor.close()
         return list

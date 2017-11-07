@@ -1,8 +1,8 @@
 from sys import maxsize
-####
+#####
 class create_new_address:
     def __init__(self,firstname=None, middlename=None, lastname=None, nickname=None, title=None, company=None, address=None, home=None, mobile=None,
-                           work=None, fax=None, email=None, byear=None, id=None ):
+                           work=None, fax=None, email=None, byear=None, id=None, phone=None ):
         self.firstname=firstname
         self.middlename=middlename
         self.lastname=lastname
@@ -17,10 +17,11 @@ class create_new_address:
         self.email = email
         self.byear = byear
         self.id = id
+        self.phone=phone
         ####
 
     def __repr__(self):
-        return "%s: %s: %s" % (self.id, self.firstname, self.lastname)
+        return "%s: %s: %s: %s: %s: %s: %s: %s: %s: %s" % (self.id, self.firstname, self.lastname, self.address, self.email, self.phone, self.home, self.mobile, self.work, self.fax)
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id)
