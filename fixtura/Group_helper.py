@@ -95,3 +95,13 @@ class grouphelp:
     def select_group_by_id(self,id):
         wd = self.app.wd
         wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def click_on_value(self,group_id):
+        wd=self.app.wd
+
+        wd.find_element_by_css_selector("select[name='to_group']>option[value='%s']" % group_id).click()
+        wd.find_element_by_xpath("//div[@class='right']/input").click()
+
+    def select_group_dropdown(self,group_id):
+        wd=self.app.wd
+        wd.find_element_by_css_selector("option[value='%s']" % group_id).click()

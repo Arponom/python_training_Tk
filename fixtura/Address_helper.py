@@ -88,6 +88,18 @@ class adress_helper:
         wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//tr[@class='odd']/td[8]/a/img").click()
 
+    def click_dropdown(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//form[@id='right']/select//option[2]").click()
+
+    def click_checkbox(self,delete):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//input[@id='%s']" % delete).click()
+
+    def select_address_checkbox(self,choice_id_to_delete):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//input[@id='%s']" % choice_id_to_delete).click()
+        wd.find_element_by_name('remove').click()
 
     def edit_addresss(self, addresss):
         wd = self.app.wd
@@ -137,6 +149,15 @@ class adress_helper:
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
         self.address_cache = None
+
+    def check_dell(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//div[@class='right']//select[normalize-space(.)='sdf test2 test3']//option[1]").click()
+        wd.find_element_by_name("add").click()
+
+    def check_delll(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("// form[ @ id = 'right'] / select // option[3]").click()
 
     def check_del_Index(self, index):
         wd = self.app.wd
@@ -189,5 +210,7 @@ class adress_helper:
 
                 self.address_cache.append(create_new_address(id=id, firstname=first_name,address=address,email=email, lastname=last_name, phone=phone))
         return list(self.address_cache)
-# ----------------------------------
+
+
+    # ----------------------------------
 ###

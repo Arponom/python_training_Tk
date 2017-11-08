@@ -18,6 +18,18 @@ class DbFixture:
         try:
             cursor.execute("select group_id, group_name,group_header, group_footer from group_list")
             for row in cursor:
+                (id, name, header, footer) = row
+                list.append(add_new_group(id=str(id), name=name, header=header,footer=footer))
+        finally:
+            cursor.close()
+        return list
+
+    def get_group_listt(self):
+        list=[]
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select group_id, group_name,group_header, group_footer from group_list")
+            for row in cursor:
                 (id,name,header,footer) = row
                 list.append(add_new_group(id=str(id), name=name, header=header,footer=footer))
         finally:
