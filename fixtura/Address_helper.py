@@ -86,7 +86,7 @@ class adress_helper:
     def click_Index(self,index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
-        wd.find_element_by_xpath("//tr[@class='odd']/td[8]/a/img").click()
+        wd.find_elements_by_css_selector("img[alt='Edit']")[index].click()
 
     def click_dropdown(self):
         wd = self.app.wd

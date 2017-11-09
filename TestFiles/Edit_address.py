@@ -31,5 +31,5 @@ def test_edit_address(app, db):
 
     old_address[index]= address
     assert sorted(old_address, key=create_new_address.id_or_max) == sorted(new_address,key=create_new_address.id_or_max)
-
+    return print(address.id)
     #app.auth.logout_gr()
