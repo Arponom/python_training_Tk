@@ -23,6 +23,15 @@ def test_delete_address_from_group(app):
         delete = choice(choise_address).id
         app.adress.click_checkbox(delete)
         app.group.click_on_value(group_id)
+        list_of_address_in_choise_group = app.adress.get_address_list()
+        choice_id_to_delete = choice(list_of_address_in_choise_group).id
+
+        app.adress.select_address_checkbox(choice_id_to_delete)
+
+        new_address_in_group = db.get_contacts_in_group(create_new_address(id='%s' % group_id))
+
+        assert len(old_address_in_group) - 1 == len(new_address_in_group)
+
     else:
 
         list_of_address_in_choise_group = app.adress.get_address_list()
